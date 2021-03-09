@@ -1,0 +1,113 @@
+.div-people {
+  text-align: center;
+  margin-top: 110px;
+  padding: 20px;
+}
+
+.people {
+  display: none;
+  background-color: var(--VaryLighGray);
+  padding-bottom: 10px;
+  max-width: 600px;
+  margin: auto;
+  height: auto;
+}
+
+.people img {
+  width: 90px;
+  position: relative;
+  bottom: 50px;
+}
+
+.label-people {
+  border: 2px solid var(--brightred);
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.div-labels {
+  writing-mode: vertical-lr !important;
+  margin: auto;
+}
+
+.div-no-button-util {
+  text-align: center;
+  margin-top: 80px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[id="Anisha"]:checked ~ .slider-container .div-Anisha {
+  display: block;
+}
+
+input[id="Anisha"]:checked ~ .div-labels label[for="Anisha"] {
+  background-color: var(--brightred);
+}
+
+input[id="Ali"]:checked ~ .slider-container .div-Ali {
+  display: block;
+}
+
+input[id="Ali"]:checked ~ .div-labels label[for="Ali"] {
+  background-color: var(--brightred);
+}
+
+input[id="Richard"]:checked ~ .slider-container .div-Richard {
+  display: block;
+}
+
+input[id="Richard"]:checked ~ .div-labels label[for="Richard"] {
+  background-color: var(--brightred);
+}
+
+input[id="Shanai"]:checked ~ .slider-container .div-Shanai {
+  display: block;
+}
+
+input[id="Shanai"]:checked ~ .div-labels label[for="Shanai"] {
+  background-color: var(--brightred);
+}
+
+/* media queries */
+@media screen and (min-width: 1200px) {
+  .people {
+    display: block;
+    width: 430px;
+    margin: 30px;
+    padding: 14px;
+  }
+  .label-people {
+    display: none;
+  }
+
+  .slider-container {
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+
+  .slider-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+
+  .slider-container::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+
+  .div-people-h2 {
+    text-align: center;
+  }
+
+  .add-h2-util {
+    text-align: center;
+  }
+}

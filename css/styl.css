@@ -1,0 +1,105 @@
+@import "./hero.css";
+@import "./people.css";
+@import "./footer.css";
+
+body {
+  font-size: 16px;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --brightred: hsl(12, 88%, 59%);
+  --darkblue: hsl(228, 39%, 23%);
+  --DarkGrayishBlue: hsl(227, 12%, 61%);
+  --VeryDarkBlue: hsl(233, 12%, 13%);
+  --VeryPaleRed: hsl(13, 100%, 96%);
+  --VaryLighGray: hsl(0, 0%, 98%);
+}
+
+/* header */
+
+header label {
+  background: url("../images/icon-hamburger.svg") no-repeat;
+  display: block;
+  height: 27px;
+  width: 27px;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.ul-header {
+  padding: 0;
+  background-color: white;
+  display: none;
+  text-align: center;
+  margin: 20px;
+}
+
+.button-header {
+  display: none;
+  width: 150px;
+}
+
+#hamburger {
+  display: none;
+}
+
+.div-header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.li:hover {
+  color: rgb(173, 166, 166);
+}
+
+/* media queries */
+@media screen and (min-width: 1200px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .ul-header {
+    display: flex;
+    background-color: transparent;
+  }
+
+  header div label {
+    display: none;
+  }
+  .button-header {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #hamburger:checked ~ header nav ul {
+    display: block;
+  }
+
+  #hamburger:checked ~ header div label {
+    background: url("../images/icon-close.svg") no-repeat;
+  }
+  
+  #hamburger:checked ~ header {
+    background-color: rgba(123, 121, 187, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0vw;
+    z-index: 1;
+  }
+}
